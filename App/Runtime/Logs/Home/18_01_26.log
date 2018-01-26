@@ -1,0 +1,416 @@
+[ 2018-01-26T09:44:39+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0510s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0500s ]
+
+[ 2018-01-26T09:44:41+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0570s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 1 AND ( yang_article.sign = 0 ) ORDER BY add_time desc LIMIT 0,6   [ RunTime:0.0600s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 1 AND ( yang_article.sign = 1 ) ORDER BY add_time desc LIMIT 0,4   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 2 AND ( yang_article.sign = 0 ) ORDER BY add_time desc LIMIT 0,6   [ RunTime:0.0470s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 2 AND ( yang_article.sign = 1 ) ORDER BY add_time desc LIMIT 0,4   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `yang_flash` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `yang_flash` ORDER BY sort LIMIT 6   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY add_time desc LIMIT 1   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516896000 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931080-60*60*24 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931080-60*60*24*7 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931080-60*60*24 ) LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT SUM(num*price) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931080-60*60*24 ) LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price asc LIMIT 1   [ RunTime:0.0500s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price desc LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'buy' AND `status` IN (0,1) ORDER BY price desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'sell' AND `status` IN (0,1) ORDER BY price asc LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yang_trade` LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `yang_link` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_link`  [ RunTime:0.0430s ]
+SQL: SELECT yang_issue.*,yang_currency.currency_name as name FROM `yang_issue` left join yang_currency on yang_currency.currency_id=yang_issue.currency_id  ORDER BY  id desc   [ RunTime:0.0490s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T09:44:42+08:00 ] 127.0.0.1 /Home/Index/%EF%BF%A52717.80%20_%20%E3%80%90%E7%81%AB%E5%B8%81%E3%80%91%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%A4%E6%98%93_%E6%AF%94%E7%89%B9%E5%B8%81%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0_%E8%99%9A%E6%8B%9F%E5%B8%81%E8%8E%B1%E7%89%B9%E5%B8%81_%E6%AF%94%E7%89%B9%E5%B8%81%E5%AE%98%E7%BD%91_files/page_glb_var.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0425s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0590s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-26T09:51:13+08:00 ] 127.0.0.1 /Home/Safe/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0460s ]
+
+[ 2018-01-26T09:51:14+08:00 ] 127.0.0.1 /Home/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T09:51:15+08:00 ] 127.0.0.1 /Home/Zhongchou/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0430s ]
+SQL: SELECT `id`,`add_time`,`end_time`,`num`,`num_nosell`,`zhongchou_success_bili`,`status` FROM `yang_issue`  [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yang_issue` left join yang_currency on yang_currency.currency_id=yang_issue.currency_id  LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT yang_issue.*,yang_currency.currency_name as name,yang_currency.currency_logo as logo FROM `yang_issue` left join yang_currency on yang_currency.currency_id=yang_issue.currency_id  ORDER BY end_time desc LIMIT 0,5   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-26T09:51:17+08:00 ] 127.0.0.1 /Home/Orders/currency_trade.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yang_currency` WHERE ( is_line=1 ) LIMIT 1   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1 ) ORDER BY sort LIMIT 0,10   [ RunTime:0.0480s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY add_time desc LIMIT 1   [ RunTime:0.0470s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516896000 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931477-60*60*24 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931477-60*60*24*7 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931477-60*60*24 ) LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT SUM(num*price) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931477-60*60*24 ) LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price asc LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price desc LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'buy' AND `status` IN (0,1) ORDER BY price desc LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'sell' AND `status` IN (0,1) ORDER BY price asc LIMIT 1   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T09:51:18+08:00 ] 127.0.0.1 /Home/Art/index/ramdon_id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0510s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `yang_article` WHERE `position_id` IN ('1','2') LIMIT 1   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_article` WHERE `position_id` IN ('1','2') ORDER BY add_time desc LIMIT 0,10   [ RunTime:0.0520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T09:51:19+08:00 ] 127.0.0.1 /Home/Orders/_PUBLIC__/Home/js/script.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T09:51:21+08:00 ] 127.0.0.1 /Home/Market/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0440s ]
+SQL: SELECT `currency_id`,`currency_name`,`currency_logo`,`currency_mark` FROM `yang_currency` WHERE `is_line` = 1 ORDER BY sort LIMIT 1   [ RunTime:0.0480s ]
+SQL: SELECT MAX(price) AS tp_max FROM `yang_trade` WHERE `currency_id` = 29 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT MIN(price) AS tp_min FROM `yang_trade` WHERE `currency_id` = 29 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 ORDER BY add_time desc LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'buy' AND `status` IN (0,1) ORDER BY price desc LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'sell' AND `status` IN (0,1) ORDER BY price asc LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY add_time desc LIMIT 30   [ RunTime:0.0510s ]
+SQL: SELECT sum(num) as num,sum(trade_num) as trade_num,`price`,`type`,`status` FROM `yang_orders` WHERE `type` = 'buy' AND `status` IN (0,1) AND `currency_id` = 29 GROUP BY price ORDER BY price desc, add_time asc LIMIT 20   [ RunTime:0.0480s ]
+SQL: SELECT sum(num) as num,sum(trade_num) as trade_num,`price`,`type`,`status` FROM `yang_orders` WHERE `type` = 'sell' AND `status` IN (0,1) AND `currency_id` = 29 GROUP BY price ORDER BY price asc, add_time asc LIMIT 20   [ RunTime:0.0410s ]
+SQL: SELECT `currency_id`,`currency_name`,`currency_logo`,`currency_mark` FROM `yang_currency` WHERE `currency_id` <> '29' AND `is_line` = 1  [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: vo D:\PHP\wamp\www\bisheng\App\Runtime\Cache\Home\9dbed52be931137a19541fb987f23d07.php 第 341 行.
+NOTIC: [8] Undefined variable: vo D:\PHP\wamp\www\bisheng\App\Runtime\Cache\Home\9dbed52be931137a19541fb987f23d07.php 第 355 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-26T09:51:21+08:00 ] 127.0.0.1 /Home/Market/getMarket
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0430s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `status` IN (0,1) GROUP BY price  [ RunTime:0.0430s ]
+
+[ 2018-01-26T09:51:27+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 1 AND ( yang_article.sign = 0 ) ORDER BY add_time desc LIMIT 0,6   [ RunTime:0.0580s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 1 AND ( yang_article.sign = 1 ) ORDER BY add_time desc LIMIT 0,4   [ RunTime:0.0510s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 2 AND ( yang_article.sign = 0 ) ORDER BY add_time desc LIMIT 0,6   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 2 AND ( yang_article.sign = 1 ) ORDER BY add_time desc LIMIT 0,4   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_flash` ORDER BY sort LIMIT 6   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0530s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY add_time desc LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516896000 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931487-60*60*24 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931487-60*60*24*7 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931487-60*60*24 ) LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT SUM(num*price) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931487-60*60*24 ) LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price asc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'buy' AND `status` IN (0,1) ORDER BY price desc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'sell' AND `status` IN (0,1) ORDER BY price asc LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yang_trade` LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_link`  [ RunTime:0.0420s ]
+SQL: SELECT yang_issue.*,yang_currency.currency_name as name FROM `yang_issue` left join yang_currency on yang_currency.currency_id=yang_issue.currency_id  ORDER BY  id desc   [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-26T09:51:29+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0520s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0510s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 1 AND ( yang_article.sign = 0 ) ORDER BY add_time desc LIMIT 0,6   [ RunTime:0.0600s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 1 AND ( yang_article.sign = 1 ) ORDER BY add_time desc LIMIT 0,4   [ RunTime:0.0500s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 2 AND ( yang_article.sign = 0 ) ORDER BY add_time desc LIMIT 0,6   [ RunTime:0.0540s ]
+SQL: SELECT * FROM `yang_article` INNER JOIN yang_article_category ON yang_article.position_id = yang_article_category.id  WHERE yang_article_category.id = 2 AND ( yang_article.sign = 1 ) ORDER BY add_time desc LIMIT 0,4   [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_flash` ORDER BY sort LIMIT 6   [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0520s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY add_time desc LIMIT 1   [ RunTime:0.0520s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516896000 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931488-60*60*24 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT * FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time<1516931488-60*60*24*7 ) ORDER BY add_time desc LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT SUM(num) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931488-60*60*24 ) LIMIT 1   [ RunTime:0.0510s ]
+SQL: SELECT SUM(num*price) AS tp_sum FROM `yang_trade` WHERE `currency_id` = 29 AND ( add_time>1516931488-60*60*24 ) LIMIT 1   [ RunTime:0.0490s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price asc LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT `price` FROM `yang_trade` WHERE `currency_id` = 29 ORDER BY price desc LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'buy' AND `status` IN (0,1) ORDER BY price desc LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `price` FROM `yang_orders` WHERE `currency_id` = 29 AND `type` = 'sell' AND `status` IN (0,1) ORDER BY price asc LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `yang_trade` LIMIT 1   [ RunTime:0.0470s ]
+SQL: SELECT * FROM `yang_link`  [ RunTime:0.0500s ]
+SQL: SELECT yang_issue.*,yang_currency.currency_name as name FROM `yang_issue` left join yang_currency on yang_currency.currency_id=yang_issue.currency_id  ORDER BY  id desc   [ RunTime:0.0490s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-26T09:51:29+08:00 ] 127.0.0.1 /Home/Index/%EF%BF%A52717.80%20_%20%E3%80%90%E7%81%AB%E5%B8%81%E3%80%91%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E4%BA%A4%E6%98%93_%E6%AF%94%E7%89%B9%E5%B8%81%E4%BA%A4%E6%98%93%E5%B9%B3%E5%8F%B0_%E8%99%9A%E6%8B%9F%E5%B8%81%E8%8E%B1%E7%89%B9%E5%B8%81_%E6%AF%94%E7%89%B9%E5%B8%81%E5%AE%98%E7%BD%91_files/page_glb_var.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] preg_match(): Delimiter must not be alphanumeric or backslash D:\PHP\wamp\www\bisheng\App\Common\Common\function.php 第 620 行.
+SQL: SELECT * FROM `yang_config`  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `yang_dividend_config`  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `yang_article_category` WHERE ( parent_id = 6 ) LIMIT 4   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `yang_article` WHERE ( position_id = 7 ) LIMIT 4   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `yang_currency` WHERE ( is_line=1  ) ORDER BY sort  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
